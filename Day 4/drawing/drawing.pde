@@ -9,7 +9,7 @@ void setup(){
   size(500,500);
   noStroke();
 }
-
+/////
 void draw(){
   if (mousePressed) {
  //what drawmode are we in?
