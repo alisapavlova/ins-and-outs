@@ -1,37 +1,41 @@
 #include <Servo.h>
 
-//cerate an instant of a Servo object
-Servo base1;
-Servo base2;
+// create an instance of the Servo object
+Servo x;
+Servo y;
+int servoXpin = 11;
+int servoYpin = 10;
 
-int potPin1 = 5;
-int potPin2 = 4;
-int basePin1 = 9;
-int basePin2 = 10;
+// what pins are the pots on
+int potXpin = 5;
+int potYpin = 4;
 
 void setup() {
+  // analog pins dont need to be set up
 
-
-  Serial.begin (9600);
-
-  //prep the servo for use
-  base1.attach(basePin1);
-  base2.attach(basePin2);
+  Serial.begin(9600);
+  
+  // prep the servo for use
+  x.attach(servoXpin);
+  y.attach(servoYpin);
 }
 
 void loop() {
-  // read potentiometer and store to val
-  int val1 = analogRead(potPin1);
-  int val2 = analogRead(potPin2);
+  // read the potentiometerz and store to valz
+  int valX = analogRead(potXpin);
+  int valY = analogRead(potYpin);
 
-  //covvert the rate to 0-180;
-  val1 = map(val1, 0, 1023, 0, 180);
-  val2 = map(val2, 0, 1023, 0, 180);
-  Serial.println(val1, val2);
+  // convert the rangez to 0->180
+  valX = map(valX, 0, 1023, 0, 180);
+  valY = map(valY, 0, 1023, 0, 180);
 
-  //rotate the servo
-  base1.write(val1);
-  base2.write(val2);
+  Serial.print(valX);
+  Serial.print(", ");
+  Serial.println(valY);
 
-  delay (10);
+  // rotate the servoz!
+  x.write(valX);
+  y.write(valY);
+  
+  delay(10);
 }
