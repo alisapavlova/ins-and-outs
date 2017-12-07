@@ -4,12 +4,15 @@
 Servo y;
 int servoYpin = 9;
 
-int dotDelay = 110;
-int dashDelay = dotDelay*3;
-int betweenCharDelay = dotDelay*3;
-int betweenWords = dotDelay*6;
-int down = 43;
+int dotDelay = 100;
+int dashDelay = dotDelay * 3;
+int betweenCharDelay = dotDelay * 3;
+int betweenWords = dotDelay * 7;
+int down = 45;
 int up = 65;
+
+
+
 
 // variables to store serial info
 int valY = up;
@@ -24,6 +27,8 @@ void setup() {
 
   // calibrate position
   y.write(valY);
+
+
 }
 
 void loop() {
@@ -135,7 +140,7 @@ void loop() {
         makeDot();
         makeDot();
       }
-        if (myChar == 't') {
+      if (myChar == 't') {
         makeDash();
       }
       if (myChar == 'u') {
@@ -169,20 +174,22 @@ void loop() {
       if (myChar == 'z') {
         makeDash();
         makeDash();
-        makeDot(); 
-        makeDot();       
+        makeDot();
+        makeDot();
       }
       if (myChar == ' ') {
-        delay(betweenWords);    
+        delay(betweenWords);
       }
-
-
 
       delay(betweenCharDelay);
 
     }
   }
+
+
 }
+
+     
 
 void makeDot() {
   y.write(down);
