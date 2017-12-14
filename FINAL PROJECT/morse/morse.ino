@@ -8,8 +8,8 @@ int dotDelay = 100;
 int dashDelay = dotDelay * 3;
 int betweenCharDelay = dotDelay * 3;
 int betweenWords = dotDelay * 7;
-int down = 45;
-int up = 65;
+int down = 50;
+int up = 60;
 
 
 
@@ -43,142 +43,230 @@ void loop() {
     for (int i = 0; i < str.length(); i++) {
       char myChar = str.charAt(i);
 
-      if (myChar == 'a') {
+      if (myChar == 'a'|| myChar == 'A') {
         makeDot();
         makeDash();
       }
-      if (myChar == 'b') {
+      if (myChar == 'b'|| myChar == 'B') {
         makeDash();
-        makeDot();
-        makeDot();
-        makeDot();
-      }
-      if (myChar == 'c') {
-        makeDash();
-        makeDot();
-        makeDash();
-        makeDot();
-      }
-      if (myChar == 'd') {
-        makeDash();
-        makeDot();
-        makeDot();
-      }
-      if (myChar == 'e') {
-        makeDash();
-      }
-      if (myChar == 'f') {
-        makeDot();
-        makeDot();
-        makeDash();
-        makeDot();
-      }
-      if (myChar == 'g') {
-        makeDash();
-        makeDash();
-        makeDot();
-      }
-      if (myChar == 'h') {
-        makeDot();
         makeDot();
         makeDot();
         makeDot();
       }
-      if (myChar == 'i') {
-        makeDot();
-        makeDot();
-      }
-      if (myChar == 'j') {
-        makeDot();
+      if (myChar == 'c'|| myChar == 'C') {
         makeDash();
-        makeDash();
-        makeDash();
-      }
-      if (myChar == 'k') {
-        makeDash();
-        makeDot();
-        makeDash();
-      }
-      if (myChar == 'l') {
-        makeDot();
-        makeDash();
-        makeDot();
-        makeDot();
-      }
-      if (myChar == 'm') {
-        makeDash();
-        makeDash();
-      }
-      if (myChar == 'n') {
-        makeDash();
-        makeDot();
-      }
-      if (myChar == 'o') {
-        makeDash();
-        makeDash();
-        makeDash();
-      }
-      if (myChar == 'p') {
-        makeDot();
-        makeDash();
-        makeDash();
-        makeDot();
-      }
-      if (myChar == 'q') {
-        makeDash();
-        makeDash();
-        makeDot();
-        makeDash();
-      }
-      if (myChar == 'r') {
         makeDot();
         makeDash();
         makeDot();
       }
-      if (myChar == 's') {
-        makeDot();
-        makeDot();
-        makeDot();
-      }
-      if (myChar == 't') {
-        makeDash();
-      }
-      if (myChar == 'u') {
-        makeDot();
-        makeDot();
-        makeDash();
-      }
-      if (myChar == 'v') {
-        makeDot();
-        makeDot();
-        makeDot();
-        makeDash();
-      }
-      if (myChar == 'w') {
-        makeDot();
-        makeDash();
-        makeDash();
-      }
-      if (myChar == 'x') {
-        makeDash();
-        makeDot();
-        makeDot();
-        makeDash();
-      }
-      if (myChar == 'y') {
-        makeDash();
-        makeDot();
-        makeDash();
-        makeDash();
-      }
-      if (myChar == 'z') {
-        makeDash();
+      if (myChar == 'd'|| myChar == 'D') {
         makeDash();
         makeDot();
         makeDot();
       }
+      if (myChar == 'e'|| myChar == 'E') {
+        makeDash();
+      }
+      if (myChar == 'f' || myChar == 'F') {
+        makeDot();
+        makeDot();
+        makeDash();
+        makeDot();
+      }
+      if (myChar == 'g'|| myChar == 'G') {
+        makeDash();
+        makeDash();
+        makeDot();
+      }
+      if (myChar == 'h' || myChar == 'H') {
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == 'i'|| myChar == 'I') {
+        makeDot();
+        makeDot();
+      }
+      if (myChar == 'j'|| myChar == 'J') {
+        makeDot();
+        makeDash();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == 'k'|| myChar == 'K') {
+        makeDash();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == 'l'|| myChar == 'L') {
+        makeDot();
+        makeDash();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == 'm'|| myChar == 'M') {
+        makeDash();
+        makeDash();
+      }
+      if (myChar == 'n' || myChar == 'N') {
+        makeDash();
+        makeDot();
+      }
+      if (myChar == 'o'|| myChar == 'O') {
+        makeDash();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == 'p'|| myChar == 'P') {
+        makeDot();
+        makeDash();
+        makeDash();
+        makeDot();
+      }
+      if (myChar == 'q'|| myChar == 'Q') {
+        makeDash();
+        makeDash();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == 'r'|| myChar == 'R') {
+        makeDot();
+        makeDash();
+        makeDot();
+      }
+      if (myChar == 's'|| myChar == 'S') {
+        makeDot();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == 't'|| myChar == 'T') {
+        makeDash();
+      }
+      if (myChar == 'u'|| myChar == 'U') {
+        makeDot();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == 'v'|| myChar == 'V') {
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == 'w'|| myChar == 'W') {
+        makeDot();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == 'x'|| myChar == 'X') {
+        makeDash();
+        makeDot();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == 'y'|| myChar == 'Y') {
+        makeDash();
+        makeDot();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == 'z'|| myChar == 'Z' ) {
+        makeDash();
+        makeDash();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == '1') {
+        makeDot();
+        makeDash();
+        makeDash();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == '2') {
+        makeDot();
+        makeDot();
+        makeDash();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == '3') {
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDash();
+        makeDash();
+      }
+      if (myChar == '4') {
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == '5') {
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == '6') {
+        makeDash();
+        makeDot();
+        makeDot();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == '7') {
+        makeDash();
+        makeDash();
+        makeDot();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == '8') {
+        makeDash();
+        makeDash();
+        makeDash();
+        makeDot();
+        makeDot();
+      }
+      if (myChar == '9') {
+        makeDash();
+        makeDash();
+        makeDash();
+        makeDash();
+        makeDot();
+      }
+      if (myChar == '0') {
+        makeDash();
+        makeDash();
+        makeDash();
+        makeDash();
+        makeDash();
+      }
+
       if (myChar == ' ') {
         delay(betweenWords);
+      }
+
+      if (myChar == '.') {
+        makeDot();
+        makeDash();
+        makeDot();
+        makeDash();
+        makeDot();
+        makeDash();
+      }
+      if (myChar == ',') {
+        makeDash();
+        makeDash();
+        makeDot();
+        makeDot();
+        makeDash();        
+        makeDash();
       }
 
       delay(betweenCharDelay);
@@ -189,7 +277,7 @@ void loop() {
 
 }
 
-     
+
 
 void makeDot() {
   y.write(down);
