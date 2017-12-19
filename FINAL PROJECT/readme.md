@@ -39,6 +39,8 @@ off. This is where I decided to use joystick, because it moves out of its' home 
 I had to use a second arduino in order to connect a joystick and speaker to it. So in the second code, when the joystick 
 is moved out of its' home position - the speaker is making the beeping sound.
 
+   There is more description added to the code itself.
+
    All I had left to do in the 3d week of work is to make a box and some kind of stop blocks to hold the parts of my
 project on the right spot. It took me 1.5 hours to make those, and 30 more minutes for cutting holes for wires, sanding 
 and applying wood stain. On the last day I realized that It will be better to make slots for wires rather than holes, 
