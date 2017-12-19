@@ -4,8 +4,8 @@ Morse Code Translator Robot.
    For my final project I picked to make a robot arm that whould take a keyboard input from 
 Arduino Serial Monitor, and translate it into a morse code. Originally, I planed for a robot arm
 just to knock the code on the table surface, but later I decided to add some kind of button that 
-the arm can press and the beping sound would come out from a speaker; this way the code would be
-more understandable.
+the arm can press and the beeping sound would come out from a speaker; this way the code would be
+more recognizable.
 
    The main challenge for me was to find a way for the arm to react on the keyboard input in a certain
 way. It took all of the 1st week of work on the project. First, I tried to change the Pong Ball processing 
@@ -29,9 +29,9 @@ Here is that part of the code that helped me to analyze the string input.
 with the correct timing of delays: one time unit for the dot, three time units for the dash and pause between 
 characters, and seven time units for the space between words.
 
-   The next challange for me was to fond a button that the flimsy robot arm would be able to press without breaking
+   The next challange for me was to find a button that the flimsy robot arm would be able to press without breaking
 off. This is where I decided to use joystick, because it moves out of its' home position very easily. Turned out that 
-I had to use a secong arduino in order to connect a joystick and speaker to it. So in the second code, when the joystick 
+I had to use a second arduino in order to connect a joystick and speaker to it. So in the second code, when the joystick 
 is moved out of its' home position - the speaker is making the beeping sound.
 
    All I had left to do in the 3d week of work is to make a box and some kind of stop blocks to hold the parts of my
