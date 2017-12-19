@@ -22,6 +22,11 @@ Here is that part of the code that helped me to analyze the string input.
     Serial.println(str);
     for (int i = 0; i < str.length(); i++) {
       char myChar = str.charAt(i);
+      
+      if (myChar == 'a'|| myChar == 'A') {
+        makeDot();
+        makeDash();
+      }
       ...
      }
      
