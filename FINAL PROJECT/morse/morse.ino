@@ -2,19 +2,16 @@
 
 // create an instance of the Servo object
 Servo y;
-int servoYpin = 9;
+int servoYpin = 9; // digital pin to connect a servo
 
-int dotDelay = 100;
-int dashDelay = dotDelay * 3;
-int betweenCharDelay = dotDelay * 3;
-int betweenWords = dotDelay * 7;
-int down = 50;
-int up = 60;
+int dotDelay = 100;  // 1 time unit for Dot
+int dashDelay = dotDelay * 3;  // 3 time units delay for Dash
+int betweenCharDelay = dotDelay * 3; // delay between characters
+int betweenWords = dotDelay * 7;  // 7 time units dalay between words
+int down = 50; // position of the arm in degrees when it's pressing down
+int up = 60;  // home position of the arm
 
-
-
-
-// variables to store serial info
+// variable to store serial info
 int valY = up;
 
 
@@ -28,21 +25,23 @@ void setup() {
   // calibrate position
   y.write(valY);
 
-
 }
 
 void loop() {
 
-
+  // check if there is any serial data available
   if (Serial.available() > 0) {
-
+    
     String str = Serial.readStringUntil('\n');
 
     Serial.println(str);
 
+    //reading and analyzing each character of the string
     for (int i = 0; i < str.length(); i++) {
-      char myChar = str.charAt(i);
+      char myChar = str.charAt(i);  // a character variable from the string
 
+      
+      // further is the if statement for every letter, number, space, "." and ","
       if (myChar == 'a'|| myChar == 'A') {
         makeDot();
         makeDash();
@@ -269,16 +268,14 @@ void loop() {
         makeDash();
       }
 
-      delay(betweenCharDelay);
+      delay(betweenCharDelay); // inserts delay between characters
 
     }
   }
-
-
 }
 
 
-
+// dot "movement" code
 void makeDot() {
   y.write(down);
   delay(dotDelay);
@@ -286,6 +283,7 @@ void makeDot() {
   delay(dotDelay);
 }
 
+//dash "movement" code
 void makeDash() {
   y.write(down);
   delay(dashDelay);
